@@ -23,16 +23,16 @@ body {
     border: none;
 }
 
-.prizes {
+.names {
     margin-left: 20px;
    
 }
 
-#prizeForm {
+#nameForm {
     margin-bottom: 20px;
 }
 
-#prizeInput {
+#nameInput {
     margin-right: 10px;
     padding: 5px;
     font-size: 16px;
@@ -51,13 +51,13 @@ body {
     font-size: 16px;
 }
 
-#prizeList {
+#nameList {
     list-style-type: none;
     padding: 10px;
     border:1px solid gray;
 }
 
-#prizeList li {
+#nameList li {
     margin-bottom: 10px;
     font-size: 18px;
 }

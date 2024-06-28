@@ -1,10 +1,10 @@
 const canvas = document.getElementById('wheelCanvas');
 const ctx = canvas.getContext('2d');
 const spinButton = document.getElementById('spinButton');
-const prizeForm = document.getElementById('prizeForm');
-const prizeInput = document.getElementById('prizeInput');
+const nameForm = document.getElementById('nameForm');
+const nameInput = document.getElementById('nameInput');
 const colorInput = document.getElementById('colorInput');
-const prizeList = document.getElementById('prizeList');
+const nameList = document.getElementById('nameList');
 const modal = document.getElementById('modal');
 const modalText = document.getElementById('modalText');
 const closeButton = document.querySelector('.close-button');
@@ -15,8 +15,8 @@ let segments = [
     { label: 'Jisan', color: '#0000FF' },
 ];
 
-function updatePrizeList() {
-    prizeList.innerHTML = '';
+function updatenameList() {
+    nameList.innerHTML = '';
     segments.forEach((segment, index) => {
         const li = document.createElement('li');
         li.style.display = 'flex';
@@ -38,13 +38,13 @@ function updatePrizeList() {
         deleteButton.style.fontSize = '12px';
         deleteButton.addEventListener('click', () => {
             segments.splice(index, 1);
-            updatePrizeList();
+            updatenameList();
             drawWheel();
         });
 
         li.appendChild(nameSpan);
         li.appendChild(deleteButton);
-        prizeList.appendChild(li);
+        nameList.appendChild(li);
     });
 }
 
@@ -126,17 +126,17 @@ window.addEventListener('click', (event) => {
     }
 });
 
-prizeForm.addEventListener('submit', (event) => {
+nameForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const newPrize = prizeInput.value.trim();
+    const newname = nameInput.value.trim();
     const newColor = colorInput.value;
-    if (newPrize) {
-        segments.push({ label: newPrize, color: newColor });
-        updatePrizeList();
+    if (newname) {
+        segments.push({ label: newname, color: newColor });
+        updatenameList();
         drawWheel();
-        prizeInput.value = '';
+        nameInput.value = '';
     }
 });
 
-updatePrizeList();
+updatenameList();
 drawWheel();
