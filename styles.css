@@ -55,6 +55,8 @@ body {
     list-style-type: none;
     padding: 10px;
     border:1px solid gray;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 #nameList li {
