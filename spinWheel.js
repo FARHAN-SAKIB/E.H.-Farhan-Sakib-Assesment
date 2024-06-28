@@ -35,7 +35,8 @@ function updatenameList() {
         deleteButton.style.border = 'none';
         deleteButton.style.background = 'none';
         deleteButton.style.cursor = 'pointer';
-        deleteButton.style.fontSize = '12px';
+        deleteButton.style.fontSize = '10px';
+        
         deleteButton.addEventListener('click', () => {
             segments.splice(index, 1);
             updatenameList();
@@ -89,7 +90,7 @@ function spinWheel() {
     if (isSpinning) return;
     isSpinning = true;
 
-    const spinDuration = 1000;
+    const spinDuration = 1500;
     const spinEndTime = Date.now() + spinDuration;
     const spinVelocity = Math.random() * 0.5 + 0.5;
 
